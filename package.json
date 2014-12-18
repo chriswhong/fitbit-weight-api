@@ -1,0 +1,11 @@
+{
+  "name": "fitbit-weight",
+  "description": "shows my weight",
+  "version": "1",
+  "dependencies": {
+    "express": "latest",
+    "fitbit": "latest",
+    "cookie-parser": "latest",
+    "express-session": "latest"
+  }
+}
