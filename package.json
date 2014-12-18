@@ -1,7 +1,7 @@
 {
   "name": "fitbit-weight",
   "description": "shows my weight",
-  "version": "1.0",
+  "version": "1.0.0",
   "dependencies": {
     "express": "latest",
     "fitbit": "latest",
