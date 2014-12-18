@@ -8,5 +8,8 @@
     "cookie-parser": "latest",
     "express-session": "latest",
     "connect": "latest"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }

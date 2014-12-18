@@ -11,7 +11,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-app.listen(80);
+app.listen(3000);
 
 // OAuth flow
 app.get('/', function (req, res) {
