@@ -5,7 +5,7 @@ var express = require('express')
   , cookieParser = require('cookie-parser')
   , session = require('express-session');
 
-var credentials;
+var credentials = {};
 
 app.use(cookieParser());
 app.use(session({
