@@ -11,7 +11,9 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-app.listen(80);
+
+var port = process.env.PORT || 3000;
+app.listen(port)
 
 // OAuth flow
 app.get('/', function (req, res) {
