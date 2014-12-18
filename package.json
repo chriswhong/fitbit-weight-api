@@ -6,6 +6,7 @@
     "express": "latest",
     "fitbit": "latest",
     "cookie-parser": "latest",
-    "express-session": "latest"
+    "express-session": "latest",
+    "connect": "latest"
   }
 }
