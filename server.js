@@ -5,6 +5,8 @@ var express = require('express')
   , cookieParser = require('cookie-parser')
   , session = require('express-session');
 
+var credentials;
+
 app.use(cookieParser());
 app.use(session({
   secret: 'hekdhthigib',
@@ -32,7 +34,7 @@ app.get('/', function (req, res) {
       , requestTokenSecret: tokenSecret
     };
 
-
+    console.log(token);
     res.redirect(client.authorizeUrl(token));
 
   });
@@ -58,7 +60,12 @@ app.get('/oauth_callback', function (req, res) {
         oauthSettings.accessToken = token;
         oauthSettings.accessTokenSecret = secret;
 
-        res.redirect('/stats');
+        credentials.accessToken = token;
+        credentials.accessTokenSecret = secret;
+
+        console.log(credentials);
+
+        //res.redirect('/stats');
       }
   );
 });
@@ -69,9 +76,11 @@ app.get('/stats', function (req, res) {
       config.CONSUMER_KEY
     , config.CONSUMER_SECRET
     , { // Now set with access tokens
-          accessToken: req.session.oauth.accessToken
-        , accessTokenSecret: req.session.oauth.accessTokenSecret
-        , unitMeasure: 'en_GB'
+          //accessToken: req.session.oauth.accessToken
+          accessToken: credentials.accessToken
+          , accessTokenSecret: credentials.accessTokenSecret
+        //, accessTokenSecret: req.session.oauth.accessTokenSecret
+        , unitMeasure: 'en_US'
       }
   );
 
@@ -82,7 +91,7 @@ app.get('/stats', function (req, res) {
       return;
     }
 
-    console.log(weight);
+  
 
     // `activities` is a Resource model
     res.send(weight);
