@@ -65,7 +65,7 @@ app.get('/oauth_callback', function (req, res) {
 
         console.log(credentials);
 
-        //res.redirect('/stats');
+        res.redirect('/stats');
       }
   );
 });
@@ -88,6 +88,7 @@ app.get('/stats', function (req, res) {
   client.getBodyWeight(function (err, weight) {
     if (err) {
       // Take action
+      console.log(err);
       return;
     }
 
