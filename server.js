@@ -72,6 +72,7 @@ app.get('/oauth_callback', function (req, res) {
 
 // Display some stats
 app.get('/stats', function (req, res) {
+  console.log(credentials);
   client = new Fitbit(
       config.CONSUMER_KEY
     , config.CONSUMER_SECRET
