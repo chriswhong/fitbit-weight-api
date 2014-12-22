@@ -26,9 +26,11 @@ MongoClient.connect(process.env.MONGOURL, function(err, db) {
         config.findOne({
             configId: 0
         }, function(err, item) {
-            credentials = item;
-            console.log("Current token: " + credentials.accessToken);
-            console.log("Current secret: " + credentials.accessTokenSecret);
+            if(!err){
+              credentials = item;
+              console.log("Current token: " + credentials.accessToken);
+              console.log("Current secret: " + credentials.accessTokenSecret);
+            }
         });
 
         var port = process.env.PORT || 3000;
