@@ -91,8 +91,9 @@ MongoClient.connect(process.env.MONGOURL, function(err, db) {
                         configId: 0
                     }, function(err, item) {
                         credentials = item;
+                        res.redirect('/weight');
                     });
-                    res.redirect('/weight');
+                    
                 });
         });
         // Display some stats
