@@ -26,7 +26,8 @@ MongoClient.connect(process.env.MONGOURL, function(err, db) {
         config.findOne({
             configId: 0
         }, function(err, item) {
-            if(!err){
+            if(item != null){
+              console.log(item);
               credentials = item;
               console.log("Current token: " + credentials.accessToken);
               console.log("Current secret: " + credentials.accessTokenSecret);
