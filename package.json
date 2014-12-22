@@ -7,7 +7,9 @@
     "fitbit": "latest",
     "cookie-parser": "latest",
     "express-session": "latest",
-    "connect": "latest"
+    "connect": "latest",
+    "dotenv":"latest",
+    "mongodb":"latest"
   },
   "engines": {
     "node": "0.10.x"
