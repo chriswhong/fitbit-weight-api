@@ -8,7 +8,8 @@ It uses OAUTH to authenticate with the fitbit API, then stores the authenticatio
 ###Endpoints:
 
 `/authorize` - starts the OAUTH process.  You will need to authorize the app.
-`/weight` - responds with the fitbit weight data in JSON format
+
+`/weight` - responds with the fitbit weight data in JSON format.
 
 ###Environment Variables:
 
