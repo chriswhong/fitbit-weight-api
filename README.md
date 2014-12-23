@@ -14,6 +14,8 @@ It uses OAUTH to authenticate with the fitbit API, then stores the authenticatio
 ###Environment Variables:
 
 `CONSUMER_KEY` Your app's consumer key from dev.fitbit.com
+
 `CONSUMER_SECRET` Your app's consumer secret from dev.fitbit.com
+
 `MONGOURL` URL for your mongodb instance
 
